@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SILK HOUSE</title>
+    <meta
+      name="description"
+      content="SILK HOUSE is a desktop application for producing and publishing YouTube videos, run by its own author on their own computer."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #16181d;
+        --muted: #5b6472;
+        --rule: #e3e6ec;
+        --link: #3b4ee0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1017;
+          --fg: #e8ecf4;
+          --muted: #9aa5b8;
+          --rule: #232836;
+          --link: #8b9cff;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      main {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 4rem 1rem 6rem;
+      }
+      h1 {
+        font-size: 2rem;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.25rem;
+      }
+      .lede {
+        color: var(--muted);
+        margin: 0 0 2.5rem;
+      }
+      h2 {
+        font-size: 1.05rem;
+        margin: 2.5rem 0 0.75rem;
+      }
+      ul {
+        padding-left: 1.25rem;
+      }
+      li {
+        margin: 0.35rem 0;
+      }
+      a {
+        color: var(--link);
+      }
+      footer {
+        margin-top: 3.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--rule);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>SILK HOUSE</h1>
+      <p class="lede">
+        A desktop application for producing and publishing YouTube videos, run by its author on
+        their own computer.
+      </p>
+
+      <p>
+        SILK HOUSE takes a topic through research, scripting, review, narration, storyboarding,
+        footage selection and rendering, and then uploads the finished video privately to a YouTube
+        channel its operator owns. Every stage is reviewable, and nothing is published without an
+        explicit approval.
+      </p>
+
+      <h2>What it connects to</h2>
+      <p>
+        Only what the operator configures, and only on their own machine:
+      </p>
+      <ul>
+        <li>
+          <strong>YouTube</strong> — uploading videos to channels the operator owns, and reading
+          those channels' own analytics.
+        </li>
+        <li><strong>An OpenAI-compatible endpoint</strong> — writing and reviewing scripts.</li>
+        <li><strong>Pexels and Pixabay</strong> — searching for stock footage and photographs.</li>
+        <li><strong>RunPod</strong> — optional image generation on rented GPUs.</li>
+      </ul>
+      <p>
+        Narration is synthesised locally; no audio leaves the machine. There is no server, no
+        account to create and no shared installation: the application runs entirely on the
+        operator's computer and stores its work there.
+      </p>
+
+      <h2>Who it is for</h2>
+      <p>
+        This is a private tool, built and used by one person for their own YouTube channels. It is
+        not distributed, not sold and not offered as a service.
+      </p>
+
+      <footer>
+        <p>
+          <a href="./privacy.html">Privacy policy</a> &middot;
+          <a href="mailto:silkhouse.support@gmail.com">silkhouse.support@gmail.com</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

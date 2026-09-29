@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SILK HOUSE — Privacy policy</title>
+    <meta
+      name="description"
+      content="How SILK HOUSE handles Google user data: what it accesses, where it is stored, and what is never shared."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #16181d;
+        --muted: #5b6472;
+        --rule: #e3e6ec;
+        --link: #3b4ee0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1017;
+          --fg: #e8ecf4;
+          --muted: #9aa5b8;
+          --rule: #232836;
+          --link: #8b9cff;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      main {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 4rem 1rem 6rem;
+      }
+      h1 {
+        font-size: 1.9rem;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.25rem;
+      }
+      .updated {
+        color: var(--muted);
+        margin: 0 0 2.5rem;
+        font-size: 0.9rem;
+      }
+      h2 {
+        font-size: 1.05rem;
+        margin: 2.5rem 0 0.75rem;
+      }
+      ul {
+        padding-left: 1.25rem;
+      }
+      li {
+        margin: 0.35rem 0;
+      }
+      a {
+        color: var(--link);
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.92em;
+      }
+      footer {
+        margin-top: 3.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--rule);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Privacy policy</h1>
+      <p class="updated">SILK HOUSE &middot; last updated 29 September 2026</p>
+
+      <p>
+        SILK HOUSE is a desktop application that runs on its operator's own computer. There is no
+        SILK HOUSE server, no account and no shared installation. Nothing described below is sent
+        to the developer, and there is nowhere for it to be sent: the application's only network
+        calls go to the services its operator has configured it to use.
+      </p>
+
+      <h2>Google user data the application accesses</h2>
+      <p>With the operator's explicit authorization, and only for channels they own or manage:</p>
+      <ul>
+        <li>
+          <strong>Channel identity</strong> — the channel id, title and public subscriber count of
+          the channel chosen at the Google consent screen. This is how the application knows which
+          channel an authorization belongs to.
+        </li>
+        <li>
+          <strong>Video upload</strong> — videos the operator produced with the application are
+          uploaded to that channel, always privately, and their processing status is read back to
+          confirm the upload succeeded.
+        </li>
+        <li>
+          <strong>Channel analytics</strong> — views, watch time, retention and similar figures for
+          that channel's own videos, used to show the operator how their published videos are
+          performing.
+        </li>
+      </ul>
+
+      <h2>How it is used and stored</h2>
+      <ul>
+        <li>
+          Everything is stored in a local SQLite database and local files on the operator's
+          computer, and is used only to display it back to them inside the application.
+        </li>
+        <li>
+          Authorization tokens are kept in the operating system's credential store — Windows
+          Credential Manager, macOS Keychain or the equivalent. They are never written to the
+          project's configuration files, never committed to version control and never printed to
+          logs, which pass through a redaction filter.
+        </li>
+        <li>
+          Google user data is never sold, never shared with anyone, and never used for advertising
+          or for training any model.
+        </li>
+        <li>
+          Google user data is not sent to any of the other services listed below. Those receive only
+          what the operator's own project produces.
+        </li>
+      </ul>
+
+      <h2>Other services the application may call</h2>
+      <p>
+        Each is optional and inert until its credential is configured by the operator. Only the
+        project's own content is sent, never Google user data:
+      </p>
+      <ul>
+        <li><strong>An OpenAI-compatible endpoint</strong> — topic and script text, for writing and reviewing.</li>
+        <li><strong>Pexels and Pixabay</strong> — search terms, for finding stock footage.</li>
+        <li><strong>RunPod</strong> — image prompts, when image generation is enabled.</li>
+      </ul>
+      <p>Narration is synthesised locally. No audio ever leaves the machine.</p>
+
+      <h2>What the application does not collect</h2>
+      <p>
+        There is no telemetry, no usage analytics, no crash reporting and no automatic contact with
+        the developer of any kind.
+      </p>
+
+      <h2>Retention and removal</h2>
+      <ul>
+        <li>
+          Data stays on the operator's computer until they delete it. Removing the application's
+          workspace directory removes the database, the media and the produced videos.
+        </li>
+        <li>
+          Access can be withdrawn at any time at
+          <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
+          which invalidates the stored authorization immediately.
+        </li>
+        <li>
+          Stored authorizations can also be deleted from the operating system's credential store
+          directly.
+        </li>
+      </ul>
+
+      <h2>Limited Use</h2>
+      <p>
+        SILK HOUSE's use and transfer of information received from Google APIs adheres to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy"
+          >Google API Services User Data Policy</a
+        >, including the Limited Use requirements.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:silkhouse.support@gmail.com">silkhouse.support@gmail.com</a>
+      </p>
+
+      <footer>
+        <p><a href="./index.html">Back to SILK HOUSE</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
